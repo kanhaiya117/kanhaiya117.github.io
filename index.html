@@ -1,42 +1,94 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cric Score Pro</title>
+    <meta name="description" content="Cric Score Pro is a cricket scoring and live scoreboard app by Knk Ltd., powered by KK Bharat & Co.">
+    <title>Cric Score Pro | Knk Ltd.</title>
     <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        font-family: Arial, sans-serif;
-        background: #06291f;
-        color: #f3fff9;
-      }
-      main {
-        max-width: 680px;
-        padding: 32px;
-        text-align: center;
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(32px, 7vw, 56px);
-      }
-      p {
-        color: #b8d8cb;
-        font-size: 18px;
-      }
-      a {
-        color: #88e0bd;
-      }
+      :root { color-scheme: dark; --bg: #041d17; --card: #0b3128; --card-soft: #123d33; --accent: #8be0bd; --accent-strong: #41c991; --text: #f5fff9; --muted: #b7d6c9; }
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: Arial, sans-serif; background: radial-gradient(circle at 10% 10%, rgba(139, 224, 189, .18), transparent 32rem), linear-gradient(135deg, #03130f 0%, var(--bg) 52%, #08291f 100%); color: var(--text); }
+      a { color: var(--accent); }
+      header, main, footer { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+      header { padding: 28px 0 12px; display: flex; align-items: center; gap: 16px; }
+      .logo { width: 64px; height: 64px; border-radius: 18px; box-shadow: 0 14px 30px rgba(0, 0, 0, .35); }
+      .brand { margin: 0; font-size: 16px; color: var(--muted); }
+      .hero { padding: 36px 0 26px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: center; }
+      h1 { margin: 0 0 16px; font-size: clamp(38px, 8vw, 72px); line-height: .95; }
+      .lead { margin: 0 0 22px; color: var(--muted); font-size: 20px; line-height: 1.55; }
+      .pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
+      .pill { padding: 10px 14px; border: 1px solid rgba(139, 224, 189, .28); border-radius: 999px; background: rgba(11, 49, 40, .72); color: var(--text); font-weight: 700; }
+      .feature { width: 100%; border-radius: 24px; border: 1px solid rgba(255, 255, 255, .12); box-shadow: 0 24px 60px rgba(0, 0, 0, .35); }
+      section { padding: 30px 0; }
+      h2 { margin: 0 0 14px; font-size: clamp(26px, 4vw, 38px); }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .card { padding: 20px; border-radius: 22px; background: rgba(11, 49, 40, .82); border: 1px solid rgba(139, 224, 189, .14); box-shadow: 0 16px 34px rgba(0, 0, 0, .22); }
+      .card h3 { margin: 0 0 8px; font-size: 20px; }
+      .card p { margin: 0; color: var(--muted); line-height: 1.5; }
+      .screens { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .screens img { width: 100%; border-radius: 24px; border: 1px solid rgba(255, 255, 255, .1); box-shadow: 0 18px 40px rgba(0, 0, 0, .28); }
+      .links { display: flex; flex-wrap: wrap; gap: 12px; }
+      .button { display: inline-block; padding: 13px 18px; border-radius: 14px; background: var(--accent-strong); color: #042118; font-weight: 800; text-decoration: none; }
+      .button.secondary { background: var(--card-soft); color: var(--text); border: 1px solid rgba(139, 224, 189, .22); }
+      footer { padding: 28px 0 36px; color: var(--muted); text-align: center; }
+      @media (max-width: 780px) { .hero, .grid, .screens { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
+    <header>
+      <img class="logo" src="/assets/icon.png" alt="Cric Score Pro icon">
+      <div>
+        <strong>Cric Score Pro</strong>
+        <p class="brand">Knk Ltd. by KK Bharat &amp; Co.</p>
+      </div>
+    </header>
+
     <main>
-      <h1>Cric Score Pro</h1>
-      <p>Official developer site for Cric Score Pro.</p>
-      <p><a href="/app-ads.txt">app-ads.txt</a></p>
+      <section class="hero">
+        <div>
+          <h1>Score every ball. Anywhere.</h1>
+          <p class="lead">Cric Score Pro is a cricket scorebook app for local matches, tournaments, school cricket, and friendly games. It helps scorers record runs, wickets, extras, innings, and live match updates with a clean mobile-first experience.</p>
+          <div class="pill-row">
+            <span class="pill">Live scoreboard</span>
+            <span class="pill">PDF scorecard</span>
+            <span class="pill">Multi-language UI</span>
+            <span class="pill">Cloud sync</span>
+          </div>
+        </div>
+        <img class="feature" src="/assets/feature-graphic.png" alt="Cric Score Pro feature graphic">
+      </section>
+
+      <section>
+        <h2>About the app</h2>
+        <div class="grid">
+          <article class="card"><h3>Fast scoring</h3><p>Record 0, 1, 2, 3, 4, 6, wicket, wide, no-ball, bye, and leg-bye events with simple scorer controls.</p></article>
+          <article class="card"><h3>Live match view</h3><p>Share a match code so viewers can follow current score, batters, bowler, overs, chase details, and ball-by-ball updates.</p></article>
+          <article class="card"><h3>Professional reports</h3><p>Generate an English PDF scorecard with batting, bowling, wickets, innings summary, and top performers.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Screenshots</h2>
+        <div class="screens">
+          <img src="/assets/screenshots/dashboard.png" alt="Cric Score Pro dashboard">
+          <img src="/assets/screenshots/match-setup.png" alt="Cric Score Pro match setup">
+        </div>
+      </section>
+
+      <section>
+        <h2>Developer information</h2>
+        <div class="card">
+          <p>Cric Score Pro is developed by <strong>Knk Ltd.</strong>, powered by <strong>KK Bharat &amp; Co.</strong>. This website is used for app information, Google Play contact details, and AdMob app-ads.txt verification.</p>
+          <br>
+          <div class="links">
+            <a class="button" href="/app-ads.txt">View app-ads.txt</a>
+            <a class="button secondary" href="https://kanhaiya117.github.io/cricket-scorer-pro-privacy-policy/">Privacy Policy</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>Developed by Knk Ltd. by KK Bharat &amp; Co. | Powered by KK Bharat</footer>
   </body>
 </html>
